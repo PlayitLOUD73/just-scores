@@ -7,20 +7,22 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    var teams: [Team] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(teams) {
+            team in HStack{
+                Text(team.team)
+                Text(String(team.total.wins) + "-" + String(team.total.losses))
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(teams: testData)
     }
 }

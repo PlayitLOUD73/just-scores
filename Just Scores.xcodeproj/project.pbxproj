@@ -14,6 +14,7 @@
 		60EF2F4728EB7C1F009DA0E3 /* Just_ScoresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2F4628EB7C1F009DA0E3 /* Just_ScoresTests.swift */; };
 		60EF2F5128EB7C1F009DA0E3 /* Just_ScoresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2F5028EB7C1F009DA0E3 /* Just_ScoresUITests.swift */; };
 		60EF2F5328EB7C1F009DA0E3 /* Just_ScoresUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2F5228EB7C1F009DA0E3 /* Just_ScoresUITestsLaunchTests.swift */; };
+		60EF2F6028EB809D009DA0E3 /* team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2F5F28EB809D009DA0E3 /* team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		60EF2F4C28EB7C1F009DA0E3 /* Just ScoresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just ScoresUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EF2F5028EB7C1F009DA0E3 /* Just_ScoresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_ScoresUITests.swift; sourceTree = "<group>"; };
 		60EF2F5228EB7C1F009DA0E3 /* Just_ScoresUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_ScoresUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		60EF2F5F28EB809D009DA0E3 /* team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				60EF2F3728EB7C1D009DA0E3 /* ContentView.swift */,
 				60EF2F3928EB7C1F009DA0E3 /* Assets.xcassets */,
 				60EF2F3B28EB7C1F009DA0E3 /* Preview Content */,
+				60EF2F5F28EB809D009DA0E3 /* team.swift */,
 			);
 			path = "Just Scores";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				60EF2F3828EB7C1D009DA0E3 /* ContentView.swift in Sources */,
 				60EF2F3628EB7C1D009DA0E3 /* Just_ScoresApp.swift in Sources */,
+				60EF2F6028EB809D009DA0E3 /* team.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
