@@ -7,16 +7,15 @@
 
 import Foundation
 
-struct WinList {
+struct WinList: Hashable, Codable {
     var games: Int
     var wins: Int
     var losses: Int
     var ties: Int
-    
 }
 
-struct Team: Identifiable {
-    var id = UUID()
+struct Team: Hashable, Codable, Identifiable {
+    var id: Int
     var year: Int
     var team: String
     var conference: String
@@ -26,28 +25,28 @@ struct Team: Identifiable {
     var conferenceGames: WinList
     var homeGames: WinList
     var awayGames: WinList
-    
+
 }
 
 #if DEBUG
 let testData = [
-    Team(year: 2018, team: "Boston College", conference: "ACC", division: "Atlantic", expectedWins: 7.5,
-            total: WinList(games: 12, wins: 7, losses: 5, ties: 0),
+    Team(id: 1, year: 2018, team: "Boston College", conference: "ACC", division: "Atlantic",
+            expectedWins: 7.5, total: WinList(games: 12, wins: 7, losses: 5, ties: 0),
             conferenceGames: WinList(games: 8, wins: 4, losses: 4, ties: 0),
             homeGames: WinList(games: 7, wins: 5, losses: 2, ties: 0),
             awayGames: WinList(games: 5, wins: 2, losses: 3, ties: 0)),
-    Team(year: 2018, team: "Clemson", conference: "ACC", division: "Atlantic", expectedWins: 13.9,
-            total: WinList(games: 15, wins: 15, losses: 0, ties: 0),
+    Team(id: 2, year: 2018, team: "Clemson", conference: "ACC", division: "Atlantic",
+            expectedWins: 13.9, total: WinList(games: 15, wins: 15, losses: 0, ties: 0),
             conferenceGames: WinList(games: 9, wins: 9, losses: 0, ties: 0),
             homeGames: WinList(games: 7, wins: 7, losses: 0, ties: 0),
             awayGames: WinList(games: 5, wins: 5, losses: 0, ties: 0)),
-    Team(year: 2018, team: "Duke", conference: "ACC", division: "Atlantic", expectedWins: 7.4,
-            total: WinList(games: 13, wins: 8, losses: 5, ties: 0),
+    Team(id: 3, year: 2018, team: "Duke", conference: "ACC", division: "Atlantic",
+            expectedWins: 7.4, total: WinList(games: 13, wins: 8, losses: 5, ties: 0),
             conferenceGames: WinList(games: 8, wins: 3, losses: 5, ties: 0),
             homeGames: WinList(games: 6, wins: 3, losses: 3, ties: 0),
             awayGames: WinList(games: 6, wins: 4, losses: 2, ties: 0)),
-    Team(year: 2018, team: "Florida State", conference: "ACC", division: "Atlantic", expectedWins: 4,
-            total: WinList(games: 12, wins: 5, losses: 7, ties: 0),
+    Team(id: 4, year: 2018, team: "Florida State", conference: "ACC", division: "Atlantic",
+            expectedWins: 4, total: WinList(games: 12, wins: 5, losses: 7, ties: 0),
             conferenceGames: WinList(games: 8, wins: 3, losses: 5, ties: 0),
             homeGames: WinList(games: 7, wins: 4, losses: 3, ties: 0),
             awayGames: WinList(games: 5, wins: 1, losses: 4, ties: 0))

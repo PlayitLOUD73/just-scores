@@ -15,6 +15,9 @@
 		60EF2F5128EB7C1F009DA0E3 /* Just_ScoresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2F5028EB7C1F009DA0E3 /* Just_ScoresUITests.swift */; };
 		60EF2F5328EB7C1F009DA0E3 /* Just_ScoresUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2F5228EB7C1F009DA0E3 /* Just_ScoresUITestsLaunchTests.swift */; };
 		60EF2F6028EB809D009DA0E3 /* team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2F5F28EB809D009DA0E3 /* team.swift */; };
+		FD63828A9231F9D1FD072AF6 /* teamData.json in Resources */ = {isa = PBXBuildFile; fileRef = FD63893902096A288976639D /* teamData.json */; };
+		FD63897AC3454AFA43E0A70B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FD638BBA6FFC92DF686AA834 /* .swiftlint.yml */; };
+		FD638DAABF81BE1FDCED1D6B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63894427C56C4901B9148F /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		60EF2F5028EB7C1F009DA0E3 /* Just_ScoresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_ScoresUITests.swift; sourceTree = "<group>"; };
 		60EF2F5228EB7C1F009DA0E3 /* Just_ScoresUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_ScoresUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		60EF2F5F28EB809D009DA0E3 /* team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team.swift; sourceTree = "<group>"; };
+		FD63893902096A288976639D /* teamData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teamData.json; sourceTree = "<group>"; };
+		FD63894427C56C4901B9148F /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		FD638BBA6FFC92DF686AA834 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 				60EF2F4528EB7C1F009DA0E3 /* Just ScoresTests */,
 				60EF2F4F28EB7C1F009DA0E3 /* Just ScoresUITests */,
 				60EF2F3328EB7C1D009DA0E3 /* Products */,
+				FD638BBA6FFC92DF686AA834 /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				60EF2F3528EB7C1D009DA0E3 /* Just_ScoresApp.swift */,
-				60EF2F3728EB7C1D009DA0E3 /* ContentView.swift */,
 				60EF2F3928EB7C1F009DA0E3 /* Assets.xcassets */,
 				60EF2F3B28EB7C1F009DA0E3 /* Preview Content */,
-				60EF2F5F28EB809D009DA0E3 /* team.swift */,
+				60EF2F6728EBB821009DA0E3 /* Views */,
+				60EF2F6428EBB693009DA0E3 /* Models */,
+				60EF2F6528EBB6B3009DA0E3 /* Resources */,
 			);
 			path = "Just Scores";
 			sourceTree = "<group>";
@@ -128,6 +136,31 @@
 				60EF2F5228EB7C1F009DA0E3 /* Just_ScoresUITestsLaunchTests.swift */,
 			);
 			path = "Just ScoresUITests";
+			sourceTree = "<group>";
+		};
+		60EF2F6428EBB693009DA0E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				60EF2F5F28EB809D009DA0E3 /* team.swift */,
+				FD63894427C56C4901B9148F /* ModelData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		60EF2F6528EBB6B3009DA0E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD63893902096A288976639D /* teamData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		60EF2F6728EBB821009DA0E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60EF2F3728EB7C1D009DA0E3 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +269,8 @@
 			files = (
 				60EF2F3D28EB7C1F009DA0E3 /* Preview Assets.xcassets in Resources */,
 				60EF2F3A28EB7C1F009DA0E3 /* Assets.xcassets in Resources */,
+				FD63828A9231F9D1FD072AF6 /* teamData.json in Resources */,
+				FD63897AC3454AFA43E0A70B /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +298,7 @@
 				60EF2F3828EB7C1D009DA0E3 /* ContentView.swift in Sources */,
 				60EF2F3628EB7C1D009DA0E3 /* Just_ScoresApp.swift in Sources */,
 				60EF2F6028EB809D009DA0E3 /* team.swift in Sources */,
+				FD638DAABF81BE1FDCED1D6B /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
