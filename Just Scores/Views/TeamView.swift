@@ -14,8 +14,10 @@ struct TeamView: View {
     @Binding var team: String
     func fetchGames() {
 
+        let urlTeam = team.replacingOccurrences(of: " ", with: "%20")
+
         guard let baseUrl = URL(string: "http://palladium.local:5050/games?team="
-                + team + "&year=" + String(year)) else {
+                + urlTeam + "&year=" + String(year)) else {
 
             print("Invalid URL")
             return
@@ -37,22 +39,7 @@ struct TeamView: View {
     
     var body: some View {
         List(results, id: \.id){ game in VStack{
-            Button(action: {}) {
-                VStack {
-                    HStack {
-                        Text(game.home_team)
-                        Text(String(game.home_points))
-                    }.padding(.horizontal, 10.0).frame(maxWidth: .infinity, alignment: .leading).foregroundColor(Color.black)
-                    HStack {
-                        Text(game.away_team)
-                        Text(String(game.away_points))
-                    }.padding(.horizontal, 10.0).frame(maxWidth: .infinity, alignment: .leading).foregroundColor(Color.black)
-                }
-            }
-                .padding(.horizontal, 15.0)
-                .frame(height: 80.0).frame(maxWidth: .infinity)
-                .background(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 2.0))
-                .padding(.horizontal)
+            GameMiniView(game: .constant(basicG))
         } }.onAppear(perform: fetchGames)}
 
     }

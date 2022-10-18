@@ -1,0 +1,17 @@
+{
+    "home_team": {
+        "id": 200,
+        "abbreviation": "CLEM",
+        "color": "#F66733.",
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+        "points": 30
+    },
+    "away_team": {
+        "color": "#EF1216",
+        "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+        "points": 20,
+        "id": 201,
+        "abbreviation": "NCST"
+    },
+    "id": 1
+}

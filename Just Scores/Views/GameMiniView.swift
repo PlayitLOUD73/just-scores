@@ -8,23 +8,31 @@
 import SwiftUI
 
 struct GameMiniView: View {
+    @Binding var game: BasicGame
     var body: some View {
         Button(action: {}) {
             VStack {
-                Text("Team 1\nTeam 2")
-                        .padding(.horizontal, 30.0).frame(maxWidth: .infinity, alignment: .leading)
+                HStack {
+                    AsyncImage(url: URL(string: game.home_team.logo), scale: 20.0).frame(width: 25, height:25)
+                    Text(game.home_team.abbreviation)
+                    Text(String(game.home_team.points))
+                }.padding(.horizontal, 10.0).frame(maxWidth: .infinity, alignment: .leading).foregroundColor(Color.black)
+                HStack {
+                    AsyncImage(url: URL(string: game.away_team.logo), scale: 20.0).frame(width: 25, height:25)
+                    Text(game.away_team.abbreviation)
+                    Text(String(game.away_team.points))
+                }.padding(.horizontal, 10.0).frame(maxWidth: .infinity, alignment: .leading).foregroundColor(Color.black)
             }
         }
-            .padding(.horizontal, 30.0)
-            .frame(height: 100.0).frame(maxWidth: .infinity)
-            .background(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 4.0))
+            .padding(.horizontal, 15.0)
+            .frame(height: 80.0).frame(maxWidth: .infinity)
+            .background(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 2.0))
             .padding(.horizontal)
-
 }
 
     struct GameMiniView_Previews: PreviewProvider {
         static var previews: some View {
-            GameMiniView()
+            GameMiniView(game: .constant(basicG))
         }
     }
 }

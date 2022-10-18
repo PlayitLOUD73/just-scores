@@ -6,6 +6,8 @@ import Foundation
 
 var teams: [Team] = load("teamData.json")
 var games: [Game] = load("gameData.json")
+var basicG: BasicGame = load("basicGameData.json")
+
 
 func load<T: Decodable>(_ filename: String) -> T {
 
